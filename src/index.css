@@ -1,1 +1,5 @@
 @import 'tailwindcss';
+
+@theme {
+  --color-react-flow-gray: #c1c1c4;
+}

@@ -64,7 +64,7 @@ const Workflow = () => {
   );
 
   return (
-    <div className='h-screen w-screen border-2 border-red-400'>
+    <div className='h-screen w-screen border-2 border-react-flow-gray'>
       <ReactFlow
         nodes={nodes}
         edges={edges}
