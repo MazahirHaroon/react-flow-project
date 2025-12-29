@@ -1,7 +1,13 @@
-import { ReactFlow, Background, Controls } from '@xyflow/react';
+import {
+  ReactFlow,
+  Background,
+  Controls,
+  useNodesState,
+  useEdgesState,
+} from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 
-const nodes = [
+const initialNodes = [
   {
     id: '1',
     data: {
@@ -18,7 +24,7 @@ const nodes = [
   },
 ];
 
-const edges = [
+const initialEdges = [
   {
     id: '1-2',
     source: '1',
@@ -28,9 +34,18 @@ const edges = [
 ];
 
 const Workflow = () => {
+  const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
+  const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
+
   return (
     <div className='h-screen w-screen border-2 border-red-400'>
-      <ReactFlow nodes={nodes} edges={edges} fitView>
+      <ReactFlow
+        nodes={nodes}
+        edges={edges}
+        onNodesChange={onNodesChange}
+        onEdgesChange={onEdgesChange}
+        fitView
+      >
         <Background />
         <Controls />
       </ReactFlow>
