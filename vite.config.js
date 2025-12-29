@@ -9,6 +9,7 @@ export default defineConfig({
       src: '/src',
       '@public': '/public',
       '@pages': '/src/pages/index',
+      '@constants': '/src/constants',
     },
   },
 });
