@@ -1,4 +1,4 @@
-import { Workflow } from './pages';
+import { Workflow } from '@pages';
 
 const App = () => {
   return (
