@@ -1,5 +1,12 @@
+import Workflow from './pages/Workflow';
+
 const App = () => {
-  return <h1>React Flow Project</h1>;
+  return (
+    <div>
+      <h1 className='text-2xl font-bold'>React Flow Project</h1>
+      <Workflow />
+    </div>
+  );
 };
 
 export default App;
